@@ -1,0 +1,14 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# deps / build / temp
+node_modules/
+*.log
+.vercel/
+.cache/
+
+# python
+__pycache__/
+*.pyc

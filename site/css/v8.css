@@ -1,0 +1,273 @@
+/* Develop-HTA v8 - the full Function Health design system rendered in the Develop-HTA brand.
+   Warm cream ground edge to edge, elegant light serif (Fraunces), Mulish body, Fragment Mono labels.
+   Few DEEP sections, each one in-depth message + one interaction. Photo-led, honest, no fabrication.
+   Reference: functionhealth.com (primary) + charitywater.org + institute.global.
+   Tokens below are the EXACT FH fluid type + spacing scale (teardown-functionhealth.md) plus the
+   typography-rules.md rem measures. NO multi-column prose. Serif display LEFT. Zero <br> in headings. */
+
+@import url('../assets/fonts/fonts.css'); /* Mulish */
+
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-300.woff2') format('woff2');font-weight:300;font-display:swap;font-style:normal}
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-400.woff2') format('woff2');font-weight:400;font-display:swap;font-style:normal}
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-500.woff2') format('woff2');font-weight:500;font-display:swap;font-style:normal}
+@font-face{font-family:'Fragment Mono';src:url('../assets/fonts/fragment-mono-400.ttf') format('truetype');font-weight:400;font-display:swap;font-style:normal}
+
+:root{
+  /* fonts */
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Mulish',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:'Fragment Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* FH fluid type scale (exact, verbatim from teardown) - only the sizes actually in use */
+  --h2:clamp(3rem,1.5038vw + 2.6466rem,4rem);
+  --h3:clamp(2.125rem,1.0338vw + 1.882rem,2.8125rem);
+  --h5:clamp(1.375rem,.188vw + 1.3308rem,1.5rem);
+  --text-xxl:clamp(1.8125rem,.4699vw + 1.7021rem,2.125rem);
+  --text-xl:clamp(1.125rem,.5639vw + .9925rem,1.5rem);
+  --text-lg:clamp(1.125rem,.188vw + 1.0808rem,1.25rem);
+  --text-md:clamp(1rem,.188vw + .9558rem,1.125rem);
+  --tagline:clamp(.75rem,.3759vw + .6617rem,1rem);   /* mono uppercase labels */
+
+  /* FH fluid spacing scale (exact, verbatim) */
+  --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:clamp(.75rem,.3759vw + .6617rem,1rem);
+  --s5:clamp(1rem,.3759vw + .9117rem,1.25rem);--s6:clamp(1.25rem,.3759vw + 1.1617rem,1.5rem);
+  --s7:clamp(1.5rem,.7519vw + 1.3233rem,2rem);--s8:clamp(2rem,.7519vw + 1.8233rem,2.5rem);
+  --s9:clamp(2.5rem,1.5038vw + 2.1466rem,3.5rem);--s10:clamp(3rem,1.5038vw + 2.6466rem,4rem);
+  --s11:clamp(3.5rem,2.2556vw + 2.9699rem,5rem);
+
+  /* layout - ONE shared content grid: --maxw cap + --gut edge, wired into .wrap and used by every section incl. the hero */
+  --maxw:1280px;
+  --gut:clamp(1.4rem,4vw,4.5rem);
+
+  /* rem display measures (typography-rules R1 - NEVER ch on a display heading) */
+  --measure-hero:      clamp(16rem,46vw,30rem);
+  --measure-statement: clamp(15rem,42vw,26rem);
+  --measure-h2:        clamp(16rem,50vw,32rem);
+  --measure-h3:        22rem;
+  --measure-body:      34rem;   /* ~66ch Mulish (NICE rule) */
+  --measure-lead:      38rem;
+
+  /* colour - one warm ground + brand */
+  --cream:#FEF9EF; --cream-2:#F6EEDE; --paper:#FBF4E7;
+  --ink:#2A2B2F; --ink-2:#5F5D5A; --ink-3:#8A867F;
+  --navy:#0E2C46; --teal:#14808C; --teal-deep:#0F6470;
+  --line:#E9DFCC; --line-2:#DED2B8;
+
+  --ease:cubic-bezier(.22,.61,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto;overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:var(--text-md);line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:var(--teal-deep);text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-weight:300;color:var(--navy);margin:0;line-height:1.04;letter-spacing:-.015em;text-align:left;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.serif-em{font-style:italic;font-weight:400}
+.mono{font-family:var(--mono);font-size:var(--tagline);letter-spacing:.08em;text-transform:uppercase;color:var(--teal-deep);font-weight:400}
+
+/* ================= CTA (navy pill on cream - every section) ================= */
+.cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--body);font-weight:700;font-size:1rem;padding:1rem 1.9rem;border-radius:999px;background:var(--navy);color:var(--cream);transition:transform .5s var(--spring),background .4s var(--ease);white-space:nowrap}
+.cta:hover{background:var(--teal-deep);color:#fff;transform:translateY(-2px)}
+.cta .arw{transition:transform .4s var(--ease)}.cta:hover .arw{transform:translateX(4px)}
+.link-u{font-weight:700;color:var(--navy);border-bottom:1.5px solid var(--teal);padding-bottom:2px}
+.link-u:hover{color:var(--teal-deep)}
+@media(max-width:560px){.cta{white-space:normal;text-align:center}}
+
+/* ================= header ================= */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:40;padding-block:1.1rem;transition:background .4s var(--ease),box-shadow .4s}
+.hdr.stuck{background:rgba(254,249,239,.86);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(42,43,47,.06)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.hdr img{height:38px}
+.hdr nav{display:flex;gap:2rem}
+.hdr nav a{color:var(--ink);font-weight:600;font-size:.95rem}
+.hdr nav a:hover{color:var(--navy)}
+@media(max-width:960px){.hdr nav{display:none}}
+
+/* ================= §1 HERO (text in the shared .wrap, photo bleeds behind on the right) ================= */
+/* The hero text sits in the SAME .wrap as every section, so its left edge + measure match the page grid.
+   The photo is absolutely positioned to the right half and bleeds behind the capped text column. */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:6rem}
+.hero .wrap{position:relative;z-index:2}
+.hero__text{max-width:var(--measure-hero);padding-block:clamp(2rem,6vh,5rem)}
+.hero h1{font-size:clamp(2.7rem,1rem + 6.4vw,5.4rem);line-height:1.0;letter-spacing:-.02em;max-width:var(--measure-hero)}
+.hero .sub{margin-top:1.6rem;font-size:var(--text-xl);color:var(--ink-2);max-width:32rem;line-height:1.5;text-wrap:pretty}
+.hero__cta{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center}
+.hero__media{position:absolute;top:0;right:0;width:clamp(40%,46vw,50%);height:100%;overflow:hidden;z-index:1}
+.hero__media img{width:100%;height:112%;object-fit:cover;object-position:50% 30%;will-change:transform;animation:kenburns 22s var(--ease) forwards}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--cream) 1%,rgba(254,249,239,0) 17%),linear-gradient(0deg,rgba(14,44,70,.1),transparent 38%)}
+@media(max-width:860px){
+  .hero{display:block;min-height:auto;padding-top:5rem}
+  .hero__text{max-width:none}
+  .hero__media{position:static;width:auto;height:62vh;border-radius:20px;margin:1rem var(--gut) 0}
+  .hero__media img{height:118%}
+}
+
+/* ================= section shell ================= */
+.sec{padding-block:clamp(5rem,4rem + 7vw,11rem)}
+.sec--paper{background:var(--paper)}
+.sec--cream2{background:var(--cream-2)}
+.sec__label{display:block;margin-bottom:var(--s6)}
+.statement{font-family:var(--display);font-size:clamp(1.9rem,1rem + 3.4vw,3.5rem);line-height:1.08;font-weight:300;color:var(--navy);max-width:var(--measure-statement);letter-spacing:-.015em}
+.statement em{font-style:italic;font-weight:400;color:var(--teal-deep)}
+
+/* ---- §2 MISSION: big statement + ONE single-measure paragraph beside a portrait (no columns) ---- */
+.mission__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.mission__body .statement{margin-bottom:var(--s6)}
+.mission__lead{font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-body)}
+.mission__body .cta{margin-top:var(--s8)}
+.mission__media{border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--navy)}
+.mission__media img{width:100%;height:104%;object-fit:cover;object-position:50% 30%;will-change:transform}
+@media(max-width:860px){.mission__grid{grid-template-columns:1fr;gap:1.8rem}.mission__media{aspect-ratio:16/11}}
+
+/* ================= §3 HOW AN ASSESSMENT WORKS - pinned scroll-tracked 4-step ================= */
+/* container duty for every block here comes from the shared .wrap (see §1 grid unification) */
+.tracked{background:var(--cream-2);position:relative}
+.tracked__head{padding-top:clamp(5rem,4rem + 7vw,11rem)}
+.tracked__head h2{font-size:var(--h2);max-width:var(--measure-h2)}
+.tracked__head .intro{margin-top:var(--s6);font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-body)}
+/* progress rail */
+.tracked__rail{margin-top:var(--s9)}
+.tracked__rail-track{position:relative;height:2px;background:var(--line-2);border-radius:2px}
+.tracked__rail-fill{position:absolute;left:0;top:0;height:100%;width:25%;background:var(--teal-deep);border-radius:2px;transition:width .5s var(--ease)}
+.tracked__ticks{display:flex;justify-content:space-between;margin-top:var(--s4)}
+.tracked__ticks span{font-family:var(--mono);font-size:var(--tagline);color:var(--ink-3);letter-spacing:.06em;transition:color .4s var(--ease)}
+.tracked__ticks span.on{color:var(--teal-deep)}
+/* the horizontal step track. DEFAULT (no-JS / reduced-motion): a readable vertical stack. */
+.tracked__view{padding-block:var(--s9) clamp(5rem,4rem + 7vw,11rem)}
+.tracked__track{display:flex;flex-direction:column;gap:clamp(4rem,7vw,7.5rem)}
+.tstep{max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.tracked:not(.is-pinned) .tstep{align-items:start}
+.tstep__body{max-width:var(--measure-lead)}
+.tstep__n{font-family:var(--mono);font-size:var(--tagline);color:var(--teal-deep);letter-spacing:.08em}
+.tstep h3{font-size:var(--h3);margin:var(--s3) 0 var(--s4);font-weight:400}
+.tstep p{font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-body)}
+.tstep__media{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--navy);margin-top:0;max-width:none}
+.tstep__media img{width:100%;height:100%;object-fit:cover}
+.tracked__cta{margin-top:var(--s9)}
+/* JS-upgraded pinned horizontal mode: two-column step (text | photo), like FH */
+.tracked.is-pinned .tracked__view{overflow:hidden;padding-block:var(--s10);min-height:60svh;display:flex;flex-direction:column;justify-content:center}
+.tracked.is-pinned .tracked__track{flex-direction:row;flex-wrap:nowrap;gap:0;width:100%;will-change:transform}
+.tracked.is-pinned .tstep{flex:0 0 100%;max-width:none;padding-right:clamp(2rem,6vw,7rem);opacity:.18;transition:opacity .5s var(--ease);transform:none;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.tracked.is-pinned .tstep.is-active{opacity:1}
+.tracked.is-pinned .tstep__body{max-width:var(--measure-lead)}
+.tracked.is-pinned .tstep__body p,.tracked.is-pinned .tstep__body h3{max-width:var(--measure-lead)}
+.tracked.is-pinned .tstep__media{margin-top:0;aspect-ratio:4/5;max-height:60svh;max-width:none}
+@media(max-width:640px){.tracked.is-pinned .tstep{padding-right:1.5rem;grid-template-columns:1fr}}
+
+/* ================= §4 WHAT WE DO - 3 photo cards ================= */
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:clamp(2rem,4vw,3.2rem)}
+.head-row h2{font-size:clamp(1.9rem,1rem + 3vw,3.1rem);max-width:var(--measure-h2)}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.4vw,2.2rem)}
+.wcard{display:flex;flex-direction:column}
+.wcard__img{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--navy);margin-bottom:1.2rem}
+.wcard__img img{width:100%;height:100%;object-fit:cover;filter:brightness(1.02) contrast(1.02);transition:transform .9s var(--ease)}
+.wcard:hover .wcard__img img{transform:scale(1.05)}
+.wcard__n{font-family:var(--mono);font-size:var(--tagline);color:var(--teal-deep);letter-spacing:.06em}
+.wcard h3{font-size:1.6rem;margin:.5rem 0 .4rem;font-weight:400}
+.wcard p{color:var(--ink-2);font-size:var(--text-md);max-width:var(--measure-h3)}
+@media(max-width:820px){.work{grid-template-columns:1fr;gap:2.6rem}.wcard{min-width:0}.wcard__img{aspect-ratio:16/10}}
+
+/* ================= §5 WHY IT MATTERS - statement + honest comparison (no numbers) ================= */
+.why__head{max-width:var(--measure-statement)}
+.why__body{margin-top:var(--s7);font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-body)}
+.compare{margin-top:clamp(2.5rem,5vw,4rem);display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.2vw,1.8rem)}
+.panel{border-radius:16px;padding:clamp(1.6rem,3vw,2.6rem);border:1px solid var(--line)}
+.panel--without{background:var(--paper)}
+.panel--with{background:var(--navy);border-color:var(--navy)}
+.panel__k{font-family:var(--mono);font-size:var(--tagline);letter-spacing:.06em;color:var(--ink-3)}
+.panel--with .panel__k{color:#7FB3BB}
+.panel h3{font-size:var(--h5);font-weight:400;margin:var(--s3) 0 var(--s5)}
+.panel--with h3{color:var(--cream)}
+.panel ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
+.panel li{position:relative;padding-left:1.8rem;font-size:var(--text-md);color:var(--ink-2)}
+.panel--with li{color:#DDE7ED}
+.panel li::before{content:"";position:absolute;left:0;top:.55em;width:.7rem;height:.7rem;border-radius:50%}
+.panel--without li::before{background:var(--line-2)}
+.panel--with li::before{background:none;border:2px solid var(--teal);width:.66rem;height:.66rem;top:.5em}
+.why__cta{margin-top:var(--s9)}
+@media(max-width:720px){.compare{grid-template-columns:1fr}}
+
+/* ================= §6 STANDARDS - edge-to-edge marquee ================= */
+.standards{background:var(--cream);padding-block:clamp(3.5rem,3rem + 4vw,6.5rem);border-block:1px solid var(--line)}
+.standards__line{font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-lead)}
+.marquee{margin-top:var(--s6);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee__row{display:flex;width:max-content;gap:0;animation:marquee 34s linear infinite}
+.marquee:hover .marquee__row{animation-play-state:paused}
+.marquee__item{display:flex;align-items:center;gap:clamp(2.4rem,5vw,5rem);padding-inline:clamp(1.2rem,2.5vw,2.5rem);white-space:nowrap}
+.marquee__item span{font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,1rem + 1.4vw,2rem);color:var(--navy)}
+.marquee__item::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee__row{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.marquee{-webkit-mask-image:none;mask-image:none}}
+
+/* ================= §7 FOUNDERS - portrait + single-measure bio (honest, no monograms) ================= */
+.founders__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.founders__media{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.founders__media figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--navy)}
+.founders__media img{width:100%;height:100%;object-fit:cover}
+.founders__media figure:nth-child(2){margin-top:0}
+.founders__text h2{font-size:var(--h2);max-width:var(--measure-h2)}
+.founders__text .intro{margin-top:var(--s6);font-size:var(--text-lg);color:var(--ink-2);max-width:var(--measure-body)}
+.founders__note{margin-top:var(--s6);padding-left:1rem;border-left:2px solid var(--teal);font-size:var(--text-md);color:var(--ink-3);max-width:var(--measure-body);font-style:italic}
+.founders__text .cta{margin-top:var(--s8)}
+@media(max-width:860px){.founders__grid{grid-template-columns:1fr;gap:2.2rem}.founders__media{max-width:26rem}}
+
+/* ================= §8 FAQ - accordion ================= */
+.faq__grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.faq__head h2{font-size:var(--h2);max-width:20rem}
+.faq__head .cta{margin-top:var(--s7)}
+.faq__list{border-top:1px solid var(--line)}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__q{width:100%;background:none;border:0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;text-align:left;padding:var(--s7) 0;font-family:var(--display);font-weight:400;font-size:var(--text-xxl);color:var(--navy);letter-spacing:-.01em}
+.faq__ico{flex:0 0 auto;width:1.4rem;height:1.4rem;position:relative}
+.faq__ico::before,.faq__ico::after{content:"";position:absolute;background:var(--teal-deep);border-radius:2px;left:50%;top:50%;transition:transform .4s var(--ease)}
+.faq__ico::before{width:1.4rem;height:2px;transform:translate(-50%,-50%)}
+.faq__ico::after{width:2px;height:1.4rem;transform:translate(-50%,-50%)}
+.faq__item.open .faq__ico::after{transform:translate(-50%,-50%) scaleY(0)}
+.faq__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.faq__item.open .faq__a{grid-template-rows:1fr}
+.faq__a-inner{overflow:hidden}
+.faq__a p{padding-bottom:var(--s7);font-size:var(--text-md);color:var(--ink-2);max-width:var(--measure-body)}
+@media(max-width:860px){.faq__grid{grid-template-columns:1fr;gap:2rem}}
+@media(prefers-reduced-motion:reduce){.faq__a{transition:none}}
+
+/* ================= §9 CLOSING CTA BAND (warm full-bleed photo) ================= */
+.band{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:var(--cream)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 36%;z-index:0;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,44,70,.94) 26%,rgba(14,44,70,.68) 66%,rgba(14,44,70,.6)),linear-gradient(0deg,rgba(14,44,70,.45),transparent 45%)}
+.band .wrap{position:relative;z-index:2;padding-block:clamp(5rem,6vw,9rem)}
+.band h2{color:var(--cream);font-size:clamp(2.1rem,1rem + 3.6vw,3.8rem);max-width:var(--measure-h2);line-height:1.05}
+.band p{margin-top:1.2rem;color:#E4D9C6;font-size:var(--text-lg);max-width:34rem}
+.band .row{margin-top:2.2rem;display:flex;gap:1rem 1.6rem;flex-wrap:wrap;align-items:center}
+.band .cta{background:var(--cream);color:var(--navy)}.band .cta:hover{background:#fff;color:var(--teal-deep)}
+.band a.mail{color:var(--cream);font-weight:700;border-bottom:1.5px solid rgba(255,255,255,.4);padding-bottom:2px}
+
+/* ================= footer (white-knockout logo on navy, nav columns, honest legal) ================= */
+.ft{background:var(--navy);color:#AEC0CE;padding-block:var(--s11) var(--s8)}
+.ft__grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:clamp(2rem,4vw,4rem)}
+.ft__brand img{height:34px;margin-bottom:var(--s5)}
+.ft__brand p{font-size:var(--text-md);color:#8FA6B6;max-width:26rem}
+.ft__col h4{font-family:var(--mono);font-size:var(--tagline);letter-spacing:.08em;text-transform:uppercase;color:var(--cream);font-weight:400;margin:0 0 var(--s5)}
+.ft__col ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
+.ft__col a{color:#AEC0CE}
+.ft__col a:hover{color:var(--cream)}
+.ft__reg{font-size:.85rem;color:#7C93A4;margin-top:var(--s3)}
+.ft__note{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:var(--s10);padding-top:var(--s6);border-top:1px solid rgba(255,255,255,.1)}
+.ft__note small{color:#7C93A4;font-size:.85rem}
+@media(max-width:820px){.ft__grid{grid-template-columns:1fr 1fr}.ft__brand{grid-column:1/-1}}
+
+/* ================= reveal motion (one vocabulary) ================= */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.09s}.rv[data-d="2"]{transition-delay:.18s}
+
+/* hero ken-burns: slow scale on the img via keyframes (transform), while JS drives the
+   scroll parallax through the independent `translate` property so the two never clobber.
+   (the animation is declared on .hero__media img in the hero block above) */
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.08)}}
+
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero__media img,.mission__media img,.band img{height:100%!important;animation:none!important;transform:none!important;translate:none!important}
+}

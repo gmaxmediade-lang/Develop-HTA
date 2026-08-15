@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Develop-HTA · Health technology that works for Africa</title>
+<meta name="description" content="Develop-HTA is a non-profit bringing Health Technology Assessment to Sub-Saharan Africa, so health systems adopt the medicines, devices and diagnostics that truly work.">
+<link rel="preload" as="image" href="assets/img/hero-poster.jpg" fetchpriority="high">
+<link rel="stylesheet" href="css/v10.css">
+</head>
+<body>
+
+<!-- 0 · mission bar -->
+<div class="bar">Non-profit &middot; pre-launch &middot; Health Technology Assessment for Sub-Saharan Africa</div>
+
+<!-- 1 · nav -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="nav__logo" href="#top" aria-label="Develop-HTA home"><img src="assets/logo-transparent.png" alt="Develop-HTA" width="898" height="192"></a>
+    <nav class="nav__links" id="navMenu" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#standards">Standards</a>
+      <a href="#covers">What we assess</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn--ghost nav__cta" href="#contact">Get in touch</a>
+    <button class="nav__burger" id="navBurger" aria-expanded="false" aria-controls="navMenu" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 2 · HERO (WebGL distortion video) -->
+  <section class="hero">
+    <canvas class="hero__gl" id="gl" aria-hidden="true"></canvas>
+    <img class="hero__poster" id="heroPoster" src="assets/img/hero-poster.jpg" alt="" aria-hidden="true">
+    <video id="heroVideo" class="hero__vid" src="assets/video/hero.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="hero__scrim"></div>
+    <div class="wrap hero__in">
+      <h1 class="hero__h1">Health technology that <span class="em">works</span> for Africa</h1>
+      <p class="hero__sub">Independent evidence on what to adopt, built for the systems that need it most.</p>
+      <a class="btn btn--solid" href="#contact">Get in touch<span class="arw">&#8594;</span></a>
+      <ul class="hero__pillars" aria-label="Principles">
+        <li>Evidence-led</li><li>Locally-built</li><li>Independent</li>
+      </ul>
+    </div>
+    <div class="hero__cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- 2b · INTRO (who they are) -->
+  <section class="intro" id="intro">
+    <div class="wrap sec-head">
+      <p class="kicker">Who we are</p>
+      <h2>Develop-HTA brings <span class="em">Health Technology Assessment</span> to the systems that need it most.</h2>
+    </div>
+    <div class="wrap intro__body reveal">
+      <p>A non-profit built by a clinician and an engineer, giving health systems across Sub-Saharan Africa an independent, evidence-based read on the medicines, devices and diagnostics they are asked to adopt. The same discipline the world&#8217;s best health systems use to spend well, built for the local reality.</p>
+    </div>
+    <ul class="wrap intro__pillars reveal">
+      <li><span class="ip__k">Independent</span><span class="ip__d">No funder, no manufacturer, no agenda but the evidence.</span></li>
+      <li><span class="ip__k">Evidence-led</span><span class="ip__d">The methods the world&#8217;s best health systems trust.</span></li>
+      <li><span class="ip__k">Built for local systems</span><span class="ip__d">Weighed for the disease burden, infrastructure and budget in front of us.</span></li>
+    </ul>
+  </section>
+
+  <!-- 3 · EVIDENCE BODIES (single-line carousel) -->
+  <section class="ev" id="standards">
+    <div class="wrap sec-head">
+      <p class="kicker">The rules we follow</p>
+      <h2>We do not invent a new rulebook. We bring the <span class="em">proven</span> ones.</h2>
+    </div>
+    <div class="brandfield" id="brandfield" aria-label="Evidence bodies"></div>
+    <p class="wrap ev__note">We follow their methods. This does not imply their endorsement. Click a mark to learn what it is.</p>
+  </section>
+
+  <!-- 4 · HOW IT WORKS (animated cards, Function Health style) -->
+  <section class="how" id="how">
+    <div class="how__pin">
+      <div class="wrap sec-head how__head">
+        <p class="kicker">How an assessment works</p>
+        <h2>From an open question to a decision you can <span class="em">act on</span>.</h2>
+      </div>
+      <div class="how__scroller">
+        <div class="how__track" aria-label="The four steps of an assessment">
+          <article class="hcard">
+            <div class="hcard__img"><img src="assets/img/step-03.jpg" alt="Clinicians discussing an adoption decision" loading="lazy"><span class="hcard__n">01</span></div>
+            <div class="hcard__body">
+              <h3>Question</h3>
+              <p>A ministry, hospital or funder brings a real decision: adopt this medicine, device or diagnostic, or not. We turn it into one precise, answerable question.</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="assets/img/step-01.jpg" alt="Laboratory analysis" loading="lazy"><span class="hcard__n">02</span></div>
+            <div class="hcard__body">
+              <h3>Evidence</h3>
+              <p>We gather the clinical trials, real-world data and full costs, then quality-check every source against international HTA standards. The answer rests on what is proven, not what is marketed.</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="assets/img/step-02.jpg" alt="A clinician reviewing findings" loading="lazy"><span class="hcard__n">03</span></div>
+            <div class="hcard__body">
+              <h3>Appraisal</h3>
+              <p>Benefit, safety and cost are weighed together for the local context: disease burden, infrastructure and budget. The result fits the system in front of us, not a European average.</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="assets/img/card-advisory.jpg" alt="Advising a health team on a decision" loading="lazy"><span class="hcard__n">04</span></div>
+            <div class="hcard__body">
+              <h3>Recommendation</h3>
+              <p>A clear recommendation with its reasoning shown: adopt, negotiate or decline. A decision you can defend to a board, a ministry or the public.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · WHAT WE ASSESS (bento) -->
+  <section class="bento-sec" id="covers">
+    <div class="wrap sec-head">
+      <p class="kicker">What we assess</p>
+      <h2>Every technology a health system has to <span class="em">choose</span>.</h2>
+    </div>
+    <div class="wrap wrap--wide bento">
+      <button type="button" class="tile tile--lg tile--img reveal" aria-haspopup="dialog" style="--img:url(/assets/img/step-01.jpg)" data-how="We weigh a drug against the current standard of care, not a placebo alone. Using the best available trial evidence we ask how much added benefit it delivers, for which patients, and whether that gain is worth its price for this health system. Off-patent and generic options are compared on the same terms.">
+        <h3>Medicines</h3><p>New and off-patent drugs: do the benefits justify the cost for this population?</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+      <button type="button" class="tile tile--img reveal" aria-haspopup="dialog" style="--img:url(/assets/img/card-assess.jpg)" data-how="Devices rarely arrive with drug-level trial evidence, so we assess them differently: real-world performance, how much the result depends on the operator and the setting, maintenance and training needs, and total cost over the device's life, not just its purchase price.">
+        <h3>Devices</h3><p>From imaging to implants.</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+      <button type="button" class="tile reveal" aria-haspopup="dialog" data-how="A test is only worth adopting if it changes what happens next. Beyond accuracy, how often it is right, we assess clinical utility: does the result actually change a treatment decision and improve outcomes, and does the health system have the capacity to act on it?">
+        <h3>Diagnostics</h3><p>Tests that change what happens next.</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+      <button type="button" class="tile tile--wide tile--img reveal" aria-haspopup="dialog" style="--img:url(/assets/img/serve.jpg)" data-how="Apps, AI tools and remote monitoring are judged on real outcomes, not marketing claims. We look for evidence in the population that will use it, data privacy and safety, how it fits existing workflows, and whether benefits hold up outside the conditions of the original study.">
+        <h3>Digital health</h3><p>Apps, AI and remote tools, judged on real outcomes, not hype.</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+      <button type="button" class="tile reveal" aria-haspopup="dialog" data-how="We compare the extra cost of a technology with the extra health it produces, expressed as cost per healthy year gained. Because every budget is finite, we also weigh opportunity cost: what a health system gives up elsewhere when it funds this instead.">
+        <h3>Cost-effectiveness</h3><p>What one budget buys.</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+      <button type="button" class="tile reveal" aria-haspopup="dialog" data-how="Benefits only count net of harm. We surface adverse effects early from trial data, then track real-world and post-market signals, because rare or long-term harms often appear only once a technology is used at scale in everyday conditions.">
+        <h3>Safety</h3><p>Harms surfaced early.</p><span class="tile__hint">How we assess this &rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 6 · COMPARISON -->
+  <section class="cmp">
+    <div class="wrap sec-head">
+      <p class="kicker">Why it matters</p>
+      <h2>Adopting <span class="em">with</span> assessment, versus adopting blind.</h2>
+    </div>
+    <div class="wrap cmp__table">
+      <div class="cmp__head"><span></span><span class="cmp__c cmp__c--us">With HTA</span><span class="cmp__c">Adopt blind</span></div>
+      <div class="cmp__row reveal"><span class="cmp__label">Evidence the technology works locally</span><span class="cmp__c cmp__c--us" data-y></span><span class="cmp__c" data-n></span></div>
+      <div class="cmp__row reveal"><span class="cmp__label">Cost weighed against benefit</span><span class="cmp__c cmp__c--us" data-y></span><span class="cmp__c" data-n></span></div>
+      <div class="cmp__row reveal"><span class="cmp__label">Safety surfaced before scale</span><span class="cmp__c cmp__c--us" data-y></span><span class="cmp__c" data-n></span></div>
+      <div class="cmp__row reveal"><span class="cmp__label">A decision you can defend publicly</span><span class="cmp__c cmp__c--us" data-y></span><span class="cmp__c" data-n></span></div>
+      <div class="cmp__row reveal"><span class="cmp__label">Built for the local system, not imported</span><span class="cmp__c cmp__c--us" data-y></span><span class="cmp__c" data-n></span></div>
+    </div>
+  </section>
+
+  <!-- 7 · FOUNDERS -->
+  <section class="fnd" id="about">
+    <div class="wrap sec-head">
+      <p class="kicker">The founders</p>
+      <h2>Two people who kept meeting the same <span class="em">gap</span>.</h2>
+    </div>
+    <div class="wrap fnd__grid">
+      <figure class="person reveal"><div class="person__ph"><span>MD</span></div><figcaption><span class="person__n">Marina</span><span class="person__r">Physician, HTA lead</span><p>A medical doctor who watched adoption decisions made without the evidence to back them.</p></figcaption></figure>
+      <figure class="person reveal"><div class="person__ph"><span>JB</span></div><figcaption><span class="person__n">Jani</span><span class="person__r">Biomedical engineer</span><p>An engineer who built the technology, then asked whether it reached the people it was meant to help.</p></figcaption></figure>
+    </div>
+    <p class="wrap fnd__note">Photographs coming soon. We do not use stock faces to represent real founders.</p>
+  </section>
+
+  <!-- work with us / engage -->
+  <section class="engage" id="engage">
+    <div class="wrap engage__grid">
+
+      <!-- LEFT · the voice -->
+      <div class="engage__voice">
+        <div class="sec-head engage__head">
+          <p class="kicker">Work with us</p>
+          <h2>Bring independent evidence to your next <span class="em">adoption decision</span>.</h2>
+        </div>
+        <p class="engage__lead reveal">New medicines, devices and diagnostics reach African health systems faster than the evidence that shows whether they work here. We close that gap.</p>
+        <!-- FOUNDER-APPROVAL SLOT: first-person recombination of the on-site founder story. Founders confirm/edit before ship. -->
+        <figure class="engage__quote reveal">
+          <blockquote>We kept meeting the same gap from two sides. One of us made adoption decisions without the evidence to back them; the other built the technology, then asked whether it ever reached the people it was for. Develop-HTA is the answer we wanted and could not find.</blockquote>
+          <figcaption>
+            <span class="engage__avatars" aria-hidden="true"><span>MD</span><span>JB</span></span>
+            <span class="engage__by">Marina &amp; Jani &middot; Founders</span>
+          </figcaption>
+        </figure>
+        <div class="engage__acts reveal">
+          <a class="btn btn--solid" href="mailto:contact@develop-hta.com">Get in touch<span class="arw">&#8594;</span></a>
+          <a class="btn btn--ghost btn--ghost-dark" href="#how">See how it works</a>
+        </div>
+      </div>
+
+      <!-- RIGHT · the interactive outcomes card -->
+      <div class="engage__card reveal">
+        <p class="engage__card-h"><span class="engage__dot" aria-hidden="true"></span>One assessment, three honest outcomes.</p>
+        <div class="verdict2">
+          <div class="verdict2__tabs" role="tablist" aria-label="Assessment outcomes">
+            <button class="vt is-on" data-v="0" role="tab" aria-selected="true"><span class="vt__ic"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.8"/><path d="M13 20.5l5 5 10-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Adopt</button>
+            <button class="vt" data-v="1" role="tab" aria-selected="false"><span class="vt__ic"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8v25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 14h22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 14l-4 9h8zM31 14l-4 9h8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><rect x="14" y="32" width="12" height="3" rx="1.5" fill="currentColor"/></svg></span>Negotiate</button>
+            <button class="vt" data-v="2" role="tab" aria-selected="false"><span class="vt__ic"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l10 10M25 15L15 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Decline</button>
+          </div>
+          <div class="verdict2__panel">
+            <div class="vp is-on"><p>The evidence holds for your system. Move with confidence, backed by an independent, transparent read you can defend to a board, a ministry or the public.</p></div>
+            <div class="vp"><p>Worth it, but only at the right price or under the right conditions. We show you exactly which, so you negotiate from evidence, not hope.</p></div>
+            <div class="vp"><p>The benefit does not justify the cost or the risk here. We help you walk away early, before budgets are committed and equipment is installed.</p></div>
+          </div>
+        </div>
+        <p class="engage__card-note">Ministries, hospitals, funders and manufacturers. Pre-launch, taking on our first partners now.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 · FAQ (last) -->
+  <section class="faq" id="faq">
+    <div class="wrap sec-head"><p class="kicker">Questions</p><h2>The things people ask us first.</h2></div>
+    <div class="wrap faq__list">
+      <details class="qa"><summary>What is Health Technology Assessment?<i></i></summary><div><p>A structured way of judging whether a medicine, device or diagnostic works, is safe, and is worth its cost, before a health system commits to it.</p></div></details>
+      <details class="qa"><summary>Are you a non-profit or a consultancy?<i></i></summary><div><p>Both, by design. A European non-profit core holds the mission and methods; a Sub-Saharan consultancy arm delivers assessments. The model is being formalised now.</p></div></details>
+      <details class="qa"><summary>Who do you work with?<i></i></summary><div><p>Health ministries, hospitals, funders and manufacturers who need an independent read on whether a technology fits a given system.</p></div></details>
+      <details class="qa"><summary>Where are you active?<i></i></summary><div><p>Our focus is Sub-Saharan Africa, with methods anchored in European and global HTA practice. We are pre-launch and building our first partnerships.</p></div></details>
+      <details class="qa"><summary>How is an assessment paid for?<i></i></summary><div><p>Through a mix of philanthropic and institutional support for the non-profit core, and fees from the parties who commission a specific assessment. The exact model is being formalised as we register, and any cost is agreed openly before work begins.</p></div></details>
+      <details class="qa"><summary>What evidence does an assessment draw on?<i></i></summary><div><p>Clinical trial and safety data on the technology itself, local cost, budget and disease burden figures, and existing assessments from other health systems. We adapt that global evidence to the realities of the setting we are advising, rather than assuming a European result transfers directly.</p></div></details>
+    </div>
+  </section>
+
+</main>
+
+<!-- 9 · FOOTER (info only, no CTA) -->
+<footer class="ft" id="contact">
+  <div class="wrap ft__in">
+    <div class="ft__brand"><img src="assets/logo-white.png" alt="Develop-HTA" width="898" height="192"><p>Health technology that works for Africa.</p></div>
+    <nav class="ft__nav" aria-label="Footer">
+      <div><span>Site</span><a href="#how">How it works</a><a href="#standards">Standards</a><a href="#covers">What we assess</a><a href="#about">About</a></div>
+      <div><span>Contact</span><a href="mailto:contact@develop-hta.com">contact@develop-hta.com</a><span class="ft__muted">www.develop-hta.com</span></div>
+    </nav>
+  </div>
+  <div class="wrap ft__base"><span>&copy; 2026 Develop-HTA. A non-profit initiative, pre-registration.</span><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<!-- what-we-assess flip modal -->
+<div class="amodal" id="assessModal" hidden>
+  <div class="amodal__scrim" data-close></div>
+  <div class="amodal__card" role="dialog" aria-modal="true" aria-labelledby="amTitle">
+    <div class="amodal__flip">
+      <div class="amodal__face amodal__face--front" aria-hidden="true">
+        <h3 class="amodal__ftitle"></h3>
+      </div>
+      <div class="amodal__face amodal__face--back">
+        <button class="amodal__close" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <p class="amodal__eyebrow">How we assess this</p>
+        <h3 class="amodal__title" id="amTitle"></h3>
+        <p class="amodal__body"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- brand info popup -->
+<div class="bpop" id="brandPop" hidden>
+  <div class="bpop__scrim" data-bclose></div>
+  <div class="bpop__card" role="dialog" aria-modal="true" aria-labelledby="bpTitle">
+    <button class="bpop__close" type="button" data-bclose aria-label="Close"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></button>
+    <div class="bpop__logo" id="bpLogo"></div>
+    <h3 class="bpop__title" id="bpTitle"></h3>
+    <p class="bpop__body" id="bpBody"></p>
+  </div>
+</div>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<script type="module" src="js/v10.js"></script>
+</body>
+</html>

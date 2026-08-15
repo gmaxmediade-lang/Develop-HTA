@@ -1,0 +1,12 @@
+/* Develop-HTA type system — matched to the logo wordmark (rounded geometric humanist).
+   Display = Poppins · Body/UI = Mulish. Self-hosted (EU privacy). */
+
+/* Poppins (display / headings) */
+@font-face{font-family:'Poppins';src:url('poppins-500.woff2') format('woff2');font-weight:500;font-display:swap;font-style:normal}
+@font-face{font-family:'Poppins';src:url('poppins-600.woff2') format('woff2');font-weight:600;font-display:swap;font-style:normal}
+@font-face{font-family:'Poppins';src:url('poppins-700.woff2') format('woff2');font-weight:700;font-display:swap;font-style:normal}
+
+/* Mulish (body / UI) */
+@font-face{font-family:'Mulish';src:url('mulish-400.woff2') format('woff2');font-weight:400;font-display:swap;font-style:normal}
+@font-face{font-family:'Mulish';src:url('mulish-500.woff2') format('woff2');font-weight:500;font-display:swap;font-style:normal}
+@font-face{font-family:'Mulish';src:url('mulish-700.woff2') format('woff2');font-weight:700;font-display:swap;font-style:normal}

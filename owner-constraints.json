@@ -1,0 +1,59 @@
+{
+  "_purpose": "Max's LOCKED non-negotiables for Develop-HTA. Written BEFORE build-one (postmortem fix #1). The mechanical gate reads this file; the reference is checked against THIS, not the reverse. Change this file WITH Max before relitigating any locked item.",
+  "date_locked": "2026-08-13",
+  "decided_by": "Max (AskUserQuestion, v8 postmortem session)",
+
+  "reference": {
+    "name": "Function Health (functionhealth.com)",
+    "clone": "palette + editorial restraint ONLY",
+    "overrides": {
+      "alignment": "FH is left-aligned -> WE CENTER (headings + CTAs)",
+      "font_count": "FH uses 3 families -> WE USE 1",
+      "hero": "FH is photo-hero -> WE USE STOCK VIDEO background"
+    },
+    "note": "Max chose 'keep FH, override 3 traits'. Overriding 3 core traits means this is FH-flavoured, not a faithful clone -> craft judged against THIS spec + Max's eye, never against FH fidelity."
+  },
+
+  "hard_constraints": {
+    "hero_type": "video",
+    "hero_footage_brief": "niche-relevant to the CUSTOMER's world: African clinicians / hospital / health workers / medical technology in use. NOT abstract circuit boards, NOT generically pretty. Graded to warm cream, seamless loop, <1MB, poster, reduced-motion paused.",
+    "alignment": "centered",
+    "font_family_count": 2,
+    "_font_note": "REVISED 2026-08-13 after studying the LIVE Function Health: FH uses serif display + sans body. Fraunces (headlines) + Mulish (body/labels/stats/UI). Max chose 'match FH serif+sans'. v8's sin was THREE mismatched fonts, not a disciplined pair.",
+    "_accent_note": "Max chose NAVY+TEAL (logo brand) over FH's rust. Accepted trade-off: cooler than FH's actual warmth (which lives in FH's rust accent). Cream ground kept; navy = ink, teal = functional accent.",
+    "_layout_note": "FH pattern for 'how it works' = soft rounded numbered CARDS with a small visual each (NOT a pinned scroll stepper - that was over-engineering). FH left-aligns the hero but CENTERS section headings, and uses italic-serif accent words in headings.",
+    "heading_max_rendered_lines": 2,
+    "heading_hero_target_lines": 1,
+    "no_width_cap_that_forces_heading_stacking": true,
+    "no_br_in_headings": true,
+    "no_all_caps_kicker_labels": true,
+    "no_em_en_dashes": true,
+    "palette": {
+      "ground": "#FEF9EF warm cream",
+      "ink": "#2A2B2F",
+      "brand_navy": "#0E2C46",
+      "accent_teal": "#14808C",
+      "rule": "monochrome ground + ONE functional accent, never decorative colour on headings"
+    },
+    "photos": "VARIED subjects + settings (mixed demographics incl. non-African/white clinicians fine; mixed rooms/scenes). No reuse of the same shot. Honest 'representative / coming soon' slots for real client assets.",
+    "layout": "one-pager (acceptable while real client content is thin)"
+  },
+
+  "build_decisions": {
+    "approach": "ground-up rebuild (Max's call; loop-risk flagged and accepted)",
+    "scope": "full stock build now; swap real client assets (photos, body logos, founder headshots, registration) when they arrive",
+    "sequence": "hero + opening section FIRST for Max's eye on the new language, THEN complete the page"
+  },
+
+  "keep_from_v8": [
+    "pinned scroll 4-step stepper (Max liked it; make ticks clickable, swap last image)",
+    "founders section layout",
+    "footer (fix title font to the single family)",
+    "standards/HTA-bodies section concept (add real body logos + hover tooltips explaining each acronym)"
+  ],
+  "delete_from_v8": [
+    "the mission section immediately before the pinned scroll (redundant, doesn't feed the animation)"
+  ],
+
+  "gate_rule": "A green mechanical gate means 'ready to SHOW Max', never 'done/ELITE'. The gate script must never print a quality verdict. Max's eye is the bar. Taste items (photo register, 'feels freestyled') are NOT mechanizable and are judged by Max, by design."
+}
