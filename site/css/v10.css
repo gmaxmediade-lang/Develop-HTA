@@ -347,3 +347,37 @@ body.amodal-open{overflow:hidden}
 .ip__d{font-size:.95rem;color:var(--ink-2);line-height:1.5}
 @media(max-width:700px){.intro__pillars{grid-template-columns:1fr;gap:1.4rem}}
 
+/* ===== MOBILE POLISH v2 — phone follow-up (appended; overrides the rules above) ===== */
+
+/* [4] kill the cream/white sliver at the very bottom: back the page with the same navy as the footer,
+   so any overscroll or sub-pixel gap under the footer reads navy instead of showing the body cream */
+html{background:var(--navy)}
+
+/* [1] balanced nav on phones — logo (left) <-> burger (right). The inline "Get in touch" pill crowded the
+   right side and made the bar feel off-centre; contact stays reachable via the footer (#contact). */
+@media(max-width:640px){
+  .nav__cta{display:none}
+}
+
+/* [2] intro pillars: when they stack on a phone, make each read as an intentional card, not loose text */
+@media(max-width:700px){
+  .intro__pillars{gap:1rem}
+  .intro__pillars li{background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--teal);
+    border-radius:14px;padding:1rem 1.15rem}
+  .ip__k{font-size:1.12rem}
+}
+
+/* [3] comparison table: the 52px answer columns were too tight for "With HTA" / "Adopt blind".
+   Widen them a touch and shrink the header text so it wraps cleanly instead of cramping. */
+@media(max-width:560px){
+  .cmp__head,.cmp__row{grid-template-columns:1fr 68px 68px;gap:.55rem;padding:.8rem .85rem}
+  .cmp__head .cmp__c{font-size:.62rem;line-height:1.15;letter-spacing:.01em}
+  .cmp__label{font-size:.9rem;line-height:1.34}
+}
+
+/* [5] brand marquee fills the full width from the edge — the old mask faded ~6% in on each side,
+   which read as the row "starting" inset from the screen edge. Bring the fade right to the edges. */
+.brow{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 2%,#000 98%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0,#000 2%,#000 98%,transparent 100%)}
+.brow__track{justify-content:flex-start}
+
